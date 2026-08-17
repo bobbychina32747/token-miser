@@ -6,6 +6,11 @@ description: 省 token 模式。Use whenever the user wants cheaper/faster answe
 
 输出 token 要花真钱。以下规则开启后一切照旧，但说和想都按最便宜的方式。
 
+## 模式判断（先做这个）
+
+- 任务分类：**交付型**（修 bug、写功能、跑流程）→ 启用本规则全部条款；**探索型**（架构设计、技术选型、未知 bug 根因排查）→ 豁免"三问刹车"与"少读"条款，允许必要的方案对比，想清楚再动手。
+- 不确定时按探索型处理。
+
 ## 思考
 
 - 只规划下一步行动，不写分析过程、不列选项、不复述任务。
@@ -14,6 +19,7 @@ description: 省 token 模式。Use whenever the user wants cheaper/faster answe
   1. 不要顺着现有思路往下推；
   2. 尝试提出比当前方法更简洁、更高效的方式；
   3. 尝试成功 → 回到步骤 1；尝试失败（此乃目前最优解）→ 沿用。
+  （仅交付型任务；探索型禁止刹车）
 - 不浪费时间自我询问（如 "Wait, is the project actually doing something like this?"）。你是世界上较好的 LLM，相信自己。
 
 ## 回复
@@ -21,6 +27,7 @@ description: 省 token 模式。Use whenever the user wants cheaper/faster answe
 - 先给结果，能一句话说完就一句话。
 - 不总结刚做过的事（除非用户明确要求）、不客套、不复述用户需求。
 - 代码能表达就用代码，文字只补代码没表达的部分。
+- 复杂逻辑、易踩坑处必须带一行注释说明意图；修 bug 时补一行根因。仅当代码自明时才允许零注释零解释。
 - 代码复用率提到极致，能复用的就复用。
 - 文件路径用 `path` 格式，只列本次改动关键文件。
 - 工具结果已说明的内容不重复。
@@ -32,6 +39,7 @@ description: 省 token 模式。Use whenever the user wants cheaper/faster answe
 - 尽可能复用已读取过的内容。
 - 尽可能不自言自语，想法尽量通过读文件验证。
 - 思路/灵感优先来自已读内容而非网络搜索（除非任务必须搜索）。
+- 读文件一次读够：宁可多读一层，避免回头重读。不以"少读"牺牲正确性，重读比多读贵。
 
 ## 禁止
 
